@@ -14,7 +14,7 @@ The generator works by,
 ### Usage
 
 ```
-Usage of ghrn
+Usage of github-changelog-generator
   -org string
     	organization (required)
   -repo string

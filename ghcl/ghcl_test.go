@@ -61,7 +61,7 @@ func (mcs *mockChangelogService) FetchChangelogEntriesUntil(t time.Time) ([]*ghc
 	return entries, nil
 }
 
-func TestGHRN(t *testing.T) {
+func TestGHCL(t *testing.T) {
 	mcs := &mockChangelogService{
 		t: time.Now().Add(-60 * time.Minute),
 		entries: []*ghcl.ChangelogEntry{
