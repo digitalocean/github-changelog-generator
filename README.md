@@ -1,5 +1,7 @@
 # GHCL – GitHub ChangeLog Generator
 
+[![Build Status](https://travis-ci.org/digitalocean/github-changelog-generator.svg?branch=master)](https://travis-ci.org/digitalocean/github-changelog-generator)
+
 A changelog generator for GitHub.
 
 The generator works by,
