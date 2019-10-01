@@ -57,9 +57,13 @@ type GitHubChangelogService struct {
 // The apiURL can be used to specify a different URL
 // to access the GitHub API, typically used for GitHub enterprise customers.
 func NewGitHubChangelogService(organization, repository, token, apiURL string) *GitHubChangelogService {
-	tokenSource := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: token})
-	client := github.NewClient(oauth2.NewClient(context.Background(),
-		tokenSource))
+	client := github.NewClient(nil)
+
+	if token != "" {
+		tokenSource := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: token})
+		client = github.NewClient(oauth2.NewClient(context.Background(),
+			tokenSource))
+	}
 
 	if apiURL != "" {
 		baseURL, err := url.Parse(apiURL)
