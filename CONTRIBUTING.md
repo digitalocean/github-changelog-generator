@@ -20,7 +20,7 @@ For those folks who want a bit more guidance on the best way to contribute to th
 
 ### Go environment
 
-The minimal version of Golang for `github-changelog-generator` is 1.11. `github-changelog-generator` uses [Go modules](https://github.com/golang/go/wiki/Modules) for dependency management [with vendoring](https://github.com/golang/go/wiki/Modules#how-do-i-use-vendoring-with-modules-is-vendoring-going-away). Please run `go mod vendor` and `go mod tidy` after any dependency modifications.
+The minimal version of Golang for `github-changelog-generator` is now list in [`go.mod`](https://github.com/digitalocean/github-changelog-generator/blob/master/go.mod). `github-changelog-generator` uses [Go modules](https://github.com/golang/go/wiki/Modules) for dependency management [with vendoring](https://github.com/golang/go/wiki/Modules#how-do-i-use-vendoring-with-modules-is-vendoring-going-away). Please run `go mod vendor` and `go mod tidy` after any dependency modifications.
 
 Be sure to run `go fmt` on your code before submitting a pull request.
 
