@@ -11,7 +11,7 @@ The generator works by,
 
 ### Installation
 
-`github-changelog-generator` must be installed from source. Before doing this, you'll need Go 1.11 or later. To install, run `go get -u github.com/digitalocean/github-changelog-generator`. A `github-changelog-generator` binary will then be available under your `$GOBIN` directory.
+`github-changelog-generator` must be installed from source. To install, run `go get -u github.com/digitalocean/github-changelog-generator`. A `github-changelog-generator` binary will then be available under your `$GOBIN` directory.
 
 ### Usage
 
