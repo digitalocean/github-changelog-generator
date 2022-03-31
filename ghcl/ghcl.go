@@ -1,5 +1,5 @@
 /*
-Copyright 2019 - 2020 DigitalOcean
+Copyright 2019 - 2022 DigitalOcean
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -68,7 +68,7 @@ func NewGitHubChangelogService(organization, repository, token, apiURL string) *
 	if apiURL != "" {
 		baseURL, err := url.Parse(apiURL)
 		if err != nil {
-			panic("enterprise url is invalid: " + err.Error())
+			panic("url is invalid: " + err.Error())
 		}
 		client.BaseURL = baseURL
 	}

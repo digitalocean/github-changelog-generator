@@ -1,5 +1,5 @@
 /*
-Copyright 2019 - 2020 DigitalOcean
+Copyright 2019 - 2022 DigitalOcean
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -52,10 +52,8 @@ func (mcs *mockChangelogService) FetchReleaseTime() (time.Time, error) {
 func (mcs *mockChangelogService) FetchChangelogEntriesUntil(t time.Time) ([]*ghcl.ChangelogEntry, error) {
 	entries := make([]*ghcl.ChangelogEntry, 0)
 	for _, entry := range mcs.entries {
-		if &entry.MergedAt != nil {
-			if entry.MergedAt.After(t) {
-				entries = append(entries, entry)
-			}
+		if entry.MergedAt.After(t) {
+			entries = append(entries, entry)
 		}
 	}
 	return entries, nil
@@ -65,13 +63,13 @@ func TestGHCL(t *testing.T) {
 	mcs := &mockChangelogService{
 		t: time.Now().Add(-60 * time.Minute),
 		entries: []*ghcl.ChangelogEntry{
-			&ghcl.ChangelogEntry{
+			{
 				Number:   2,
 				Body:     "this should be in the changelog",
 				Username: "digitalocean",
 				MergedAt: time.Now().Add(-30 * time.Minute),
 			},
-			&ghcl.ChangelogEntry{
+			{
 				Number:   1,
 				Body:     "this should NOT be in the changelog",
 				Username: "digitalocean",
