@@ -1,6 +1,6 @@
 module github.com/digitalocean/github-changelog-generator
 
-go 1.17
+go 1.20
 
 require (
 	github.com/google/go-github v17.0.0+incompatible
