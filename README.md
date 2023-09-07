@@ -1,6 +1,6 @@
 # GHCL – GitHub ChangeLog Generator
 
-[![Build Status](https://travis-ci.org/digitalocean/github-changelog-generator.svg?branch=master)](https://travis-ci.org/digitalocean/github-changelog-generator)
+[![Build Status](https://github.com/digitalocean/github-changelog-generator/actions/workflows/test.yml/badge.svg)](https://github.com/digitalocean/github-changelog-generator/actions/workflows/test.yml)
 
 A changelog generator for GitHub.
 
